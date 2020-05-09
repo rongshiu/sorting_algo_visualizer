@@ -1,6 +1,3 @@
-
-# coding: utf-8
-
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import random
