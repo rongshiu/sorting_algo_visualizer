@@ -63,7 +63,7 @@ if __name__=='__main__':
     
     array=[]
     for n in range(1,N+1):
-        array.append(random.randint(1,1000)) 
+        array.append(n) 
     random.shuffle(array)
     
     if M=='b':
