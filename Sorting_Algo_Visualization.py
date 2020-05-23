@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import random
 
-
+# define and code for different types of sorting algo
 def bubble_sort(array):
     issorted=False
     counter=0
@@ -54,15 +54,18 @@ def swap(i,j,array):
     array[i],array[j]=array[j],array[i]
 
 
+# main function that takes input from user
 if __name__=='__main__':
     N=int(input('Enter number of integers to be sorted: '))
     M=str(input('\nPlease choose method of sorting:\n(b)Bubble Sort\n(i)Insertion Sort\n(q)Quick Sort\n(s)Selection sort\n'))
-    
+
+# Generate an array of integers from 1 to n and shuffle the integers to be used as initial state
     array=[]
     for n in range(1,N+1):
         array.append(n) 
     random.shuffle(array)
-    
+
+# Process input of sorting method choose by user
     if M=='b':
         title='Bubble Sort'
         generator=bubble_sort(array)
@@ -77,7 +80,8 @@ if __name__=='__main__':
         generator=quick_sort(array,0,len(array)-1)
     else:
         print('Invalid Method Selected')
-
+        
+# Plot the visualization in Matplotlib
     fig, ax = plt.subplots()
     ax.set_title(title)
     bar_rects = ax.bar(range(len(array)), array, align="edge")
